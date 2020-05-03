@@ -1,0 +1,641 @@
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin:0 auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+img{
+    opacity:20%
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+/*Navigation Styles*/
+
+.nav-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    
+    font-family: 'Yeseva One', cursive;
+    z-index: 999;
+}
+
+.name{
+    color:#D8977F;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+nav{
+    position: relative;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+nav a {
+    color: #D8977F;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: #014040;
+}
+/*About Me Hero*/
+
+.about-me-hero{
+    display: grid;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "image quote"
+    "image quote"
+}
+
+.about-me-hero-image{
+    grid-area: image;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/hero.jpg");
+}
+
+.about-me-hero-text{
+    grid-area: quote;
+    background-color: #025373;
+    color: #D8977F;
+    font-family: 'Yeseva One', cursive;
+    justify-content: center;
+    text-align: center;
+    font-size: 54px;
+}
+
+/*Paragraph Style*/
+
+p{
+    color: #025373;
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+/*Picture Collage Styles*/
+
+.collage{
+    display: grid;
+    margin-top: 90px;
+    height: 500px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "photo-one photo-two photo-three photo-four";
+}
+
+#photo1{
+    grid-area: photo-one;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.33.24 PM.png");
+}
+
+#photo2{
+    grid-area: photo-two;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.34.19 PM.png");
+}
+
+#photo3{
+    grid-area: photo-three;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.35.07 PM.png");
+}
+
+#photo4{
+    grid-area: photo-four;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/garden.png");
+}
+
+h2{
+    color:#D8977F;
+    font-size: 30px;
+    font-family: 'Yeseva One', cursive;
+    text-align:left;
+    margin-left: 50px;
+    margin-top:40px;
+}
+
+.fav-books{
+    display: grid;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "book-1 book-2 book-3 book-4";
+}
+
+#book1{
+    grid-area: book-1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.37.25 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#book2{
+    grid-area: book-2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.38.32 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#book3{
+    grid-area: book-3;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.38.03 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#book4{
+    grid-area: book-4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.40.13 PM.png");
+    border: 1px solid darkgrey;
+    margin: 20px;
+}
+
+/*Favorite Music*/
+
+h2{
+    color:#D8977F;
+    font-size: 30px;
+    font-family: 'Yeseva One', cursive;
+    text-align:left;
+    margin-left: 50px;
+    margin-top:40px;
+}
+
+.fav-music{
+    display: grid;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "music-1 music-2 music-3 music-4";
+}
+
+#music1{
+    grid-area: music-1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.44.13 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#music2{
+    grid-area: music-2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.44.35 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#music3{
+    grid-area: music-3;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.45.04 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#music4{
+    grid-area: music-4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.46.18 PM.png");
+    border: 1px solid darkgrey;
+    margin: 20px;
+}
+
+/*Favorite Podcasts*/
+
+h2{
+    color:#D8977F;
+    font-size: 30px;
+    font-family: 'Yeseva One', cursive;
+    text-align:left;
+    margin-left: 50px;
+    margin-top:40px;
+}
+
+.fav-podcasts{
+    display: grid;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "podcast-1 podcast-2 podcast-3 podcast-4";
+}
+
+#podcast1{
+    grid-area: podcast-1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.48.46 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#podcast2{
+    grid-area: podcast-2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.49.16 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#podcast3{
+    grid-area: podcast-3;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.49.57 PM.png");
+    border: 1px solid darkgrey;
+    margin:20px;
+}
+
+#podcast4{
+    grid-area: podcast-4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Screen Shot 2020-04-05 at 2.51.14 PM.png");
+    border: 1px solid darkgrey;
+    margin: 20px;
+}
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100px;
+    border-top: 3px solid #025373;
+  }
+  
+  .footer a {
+    padding: 20px 40px;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: #025373;
+  }
+
+  .footer a:hover{
+      color:#D8977F;
+  }
+
+  @media only screen and (max-width: 600px){
+
+  .name{
+      font-size: 24px;
+  }
+
+  nav a{
+      font-size:20px;
+  }
+
+  .about-me-hero-text{
+      font-size: 38px;
+  }
+
+  p{
+      font-size: 20px;
+  }
+
+  .collage{
+    display: grid;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    height: 500px;
+    grid-template-columns: 50%, 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "photo-one photo-two photo-three photo-four";
+}
+
+h1{
+    margin-top: 50px;
+    color: #025373;
+    text-align: center;
+}
+
+
+.fav-books{
+    display: grid;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "book-1 book-2" 
+    "book-3 book-4";
+}
+
+.fav-music{
+    display: grid;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "music-1 music-2"
+    "music-3 music-4";
+}
+
+.fav-podcasts{
+    display: grid;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "podcast-1 podcast-2"
+    "podcast-3 podcast-4";
+}
+
+.footer a{
+    font-size: 14px;
+}
+
+  }
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+img{
+    opacity:20%
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #025373;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+h3{
+    color: #025373;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
